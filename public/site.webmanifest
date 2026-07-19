@@ -1,0 +1,21 @@
+{
+  "name": "Data Solution BD",
+  "short_name": "DSBD",
+  "description": "Pharmacy POS, School Management, HR, Inventory & Mobile Apps — software company in Bangladesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#295FEA",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
