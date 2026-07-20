@@ -1,0 +1,19 @@
+services:
+  company-website:
+    build: .
+    image: company-website:latest
+    container_name: company-website
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    networks:
+      - web
+    mem_limit: 512m
+
+networks:
+  web:
+    external: true
