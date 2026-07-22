@@ -3,12 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import ScrollTop from "@/components/layout/ScrollTop";
 import SiteEffects from "@/components/providers/SiteEffects";
-import {
-  FaqJsonLd,
-  OrganizationJsonLd,
-  SoftwareJsonLd,
-  WebsiteJsonLd,
-} from "@/components/seo/JsonLd";
+import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/data/site";
 import "./site.css";
 import "./globals.css";
@@ -47,32 +42,15 @@ export const metadata = {
     siteName: site.name,
     title: site.seo.title,
     description: site.seo.description,
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: `${site.name} — Pharmacy POS, School ERP, HR & Mobile Apps`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.seo.title,
     description: site.seo.description,
-    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  icons: {
-    icon: [
-      { url: "/images/favicon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/images/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/favicon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/images/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
 };
@@ -89,8 +67,6 @@ export default function RootLayout({ children }) {
         />
         <OrganizationJsonLd />
         <WebsiteJsonLd />
-        <SoftwareJsonLd />
-        <FaqJsonLd />
       </head>
       <body>
         <a href="#main-content" className="skip-link">

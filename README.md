@@ -27,8 +27,11 @@ pnpm dev       # http://localhost:3000
 ## SEO
 
 - Metadata API: title, description, OG, Twitter, canonical, robots
-- JSON-LD: Organization, WebSite, SoftwareApplication list, FAQPage
+- File-based assets: `icon.png`, `apple-icon.png`, `opengraph-image.png`, `twitter-image.png`
+- Dynamic `app/sitemap.js` (home + `/solutions/*`) and `app/robots.js`
+- JSON-LD: Organization + WebSite (layout); SoftwareApplication list + FAQPage (homepage only); per-solution SoftwareApplication + BreadcrumbList
 - Semantic landmarks: `header` / `main` / `footer`, labelled sections, skip link
+- `not-found` is `noindex`
 
 ## Contact form (email)
 
@@ -38,3 +41,18 @@ Copy `.env.example` → `.env.local` and fill SMTP credentials. Submissions go t
 npm run dev
 # submit the form on /#contact
 ```
+
+## Production / VPS ops
+
+Live on Hetzner behind Caddy; deploy via GitHub Actions → GHCR.
+
+**Start here:** [docs/README.md](./docs/README.md)
+
+| Doc | Purpose |
+|-----|---------|
+| [architecture](./docs/architecture.md) | Stack, folders, mental model |
+| [deploy-cicd](./docs/deploy-cicd.md) | Actions, GHCR, secrets |
+| [operations](./docs/operations.md) | SSH, logs, restarts |
+| [runbook](./docs/runbook.md) | Troubleshooting |
+| [server-setup](./docs/server-setup.md) | Rebuild / audit checklist |
+| [dns-cloudflare](./docs/dns-cloudflare.md) | DNS + pharmacy caveat |

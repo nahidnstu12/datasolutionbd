@@ -39,7 +39,6 @@ export const navLinks = [
   { href: "/#solutions", label: "Solutions" },
   { href: "/#features", label: "Features" },
   { href: "/#process", label: "Process" },
-  { href: "/#blog", label: "Blog" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ];
